@@ -5,7 +5,47 @@
 </head>
 <body>
   <h2>Lesson 4: Javascript Time</h2>
-  
+  <section>
+    <h3>Basic Javascript</h3>
+    <p>As you know now, the main job of web browsers is to render 
+       HTML pages, along CSS sheets to style them, and Javascript
+       scripts to program both of these aspects. Lots of people use
+       Javascript but it takes work to master.</p>
+    <h4>Core Javascript</h4>
+    <p>When building Javascript applications, you will be using the 
+       language to construct and render your HTML and CSS rather than
+       hardcoding everything on to the page. Here are the basics of 
+       working with elements, some of the things you will come to use
+       the most.   </p>
+    <ul>
+      <li>Targeting Elements</li>
+        <p>You may have seen this before:</p>
+        <code>var some_div = document.getElementById('someDiv');</code>
+        <p>If not, you can probably guess that it is used to target an
+           element by its 'id' attribute. </p>
+      <li>Styling Elements</li>
+        <p>You may also be familiar with how to style (with CSS via Javascript)
+           an element. Here's how:</p>
+        <code>var style_some_div = some_div.style.color = "blue";</code>
+        <p>We can even make this code more reusabule by doing this: </p>
+        <code>var style_some_div = some_div.style;
+              style_some_div.color = "red";
+              style_some_div.textDecoration = "underline";</code>
+      <li>Creating Elements</li>
+      <p>We can make new elements with JS with the document.createElement() function:</p>
+      <code>var div1 = document.createElement('div');</code>
+      <p>This code will create an empty div tag. We can style it:</p>
+      <code>div1.style.color = "forestgreen";</code>
+      <p>And we can add text inside.</p>
+      <code>div1.innerHTML = "The boy bought the basketball."</code>
+      <p><strong>Beware!</strong>the innerHTML() method will remove all 
+        existing text and then add your text. This doesn't matter in our
+        case though, since div1 just got created and never had any text to begin with!</p>
+      <p>With document.createElement() we can actually create any type of element, even
+         ones that do not exist. This is helpful when using XML or even Angular, which both
+         rely on creating your own custom HTML tags. (As in not p, h1, h2, divs, etc.)</p>
+    </ul>
+  </section>
 </body>
 </html>
 <script src="script.js"></script>
