@@ -55,6 +55,56 @@
       <code>document.insertBefore(span1, div1);</code>
       <p>The insertBefore method takes two arguments: one is the element you want 
          to insert, and the other is the item you want to insert it before. </p>
+      <li>Putting It All Together</li>
+      <p>We now know how to use Javascript to create and style elements, and then
+         add them wherever we like to the web page. Now let's make a nice example of it.</p>
+      <p>Let's make a signup sheet with JS:</p>
+      <code>  var sign_up_form = function() {
+                  // Create a container element
+                  var sign_up_wrap = docment.createElement('span');
+                  
+                  // Style it
+                  var suw_style = sign_up_wrap.style;`1
+
+                  // Create the form
+                  var form = document.createElement('form');
+
+                  // Creat Name & Email Input
+                  var name_input = document.createElement('input');
+                  var email_input = document.createElement('input');
+
+                  // Create Submit Button
+                  var submit = document.createElement('input');
+
+
+
+                  // Set name and email inputs to use text
+                  name_input.type = "text";
+                  email_input.type = "text";
+                  submit.type = "submit";
+                  
+
+                  // Set name to name and email, respectively
+                  name_input.name = "name";
+                  email_input.name = "email";
+
+                  // Set submit btn to Submit value on click
+                  submit.value = "Submit";
+
+
+                  // Put everything together:
+                  form.append(name_input);
+                  form.append(email_input);
+                  form.append(submit);
+                  
+                  var sign_up_wrap.append(form);
+
+                  document.appendChild(sign_up_wrap);
+
+
+
+
+              } </code>
 
     </ul>
   </section>
