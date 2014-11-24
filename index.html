@@ -43,7 +43,19 @@
         case though, since div1 just got created and never had any text to begin with!</p>
       <p>With document.createElement() we can actually create any type of element, even
          ones that do not exist. This is helpful when using XML or even Angular, which both
-         rely on creating your own custom HTML tags. (As in not p, h1, h2, divs, etc.)</p>
+         rely on creating your own custom HTML tags. (As in not p tags, h1 tags, h2s, divs, etc.) Example:</p>
+      <code>var span1 = document.createElement('span');
+            span1.innertHTML = 'I am a span!';</code>
+      <li>Appending Elements</li>
+      <p>Now we know how to create and style new elements, here's how we add them to the page:</p>
+      <code>document.appendChild(div1);</code>
+      <p>That's it! Append, as you may know, adds something to the end of something else. 
+         But what if we wanted to add something to the beginning of something? Javascript
+         has you covered.</p>
+      <code>document.insertBefore(span1, div1);</code>
+      <p>The insertBefore method takes two arguments: one is the element you want 
+         to insert, and the other is the item you want to insert it before. </p>
+
     </ul>
   </section>
 </body>
